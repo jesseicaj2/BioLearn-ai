@@ -2,18 +2,24 @@
 
 **An AI-assisted interactive learning platform for cellular signaling.**
 
-BioLearn AI is a browser-based educational prototype designed to help biomedical science students learn fundamental cell signaling mechanisms through short lessons, a knowledge-check quiz, and interactive study tools. It was developed as a project for **Introduction to Artificial Intelligence (Week 9 midterm)**.
+BioLearn AI is a browser-based educational prototype designed to help biomedical science students learn fundamental cell signaling mechanisms through short lessons, a knowledge-check quiz, and interactive study tools. It was developed for the **Introduction to Artificial Intelligence — Week 9 midterm**.
+
+**Current release: V2.0 — Week 9 Midterm Prototype (November 1, 2026).**
+
+**[Launch BioLearn AI](https://jesseicaj2.github.io/BioLearn-ai/)** · [V2.0 release](https://github.com/jesseicaj2/BioLearn-ai/releases/tag/V2.0) · [V1.0 release](https://github.com/jesseicaj2/BioLearn-ai/releases/tag/V1.0)
 
 > **AI transparency:** AI tools assisted in planning and writing the application. BioLearn AI does **not** run a live AI model, generate real-time AI explanations, or send student data to an AI service. Its quizzes, feedback, and recommendations use predefined content and JavaScript rules.
 
 ## Versions and branches
 
-| Branch | Purpose | Status |
+| Reference | Purpose | Status |
 | --- | --- | --- |
-| [`main`](../../tree/main) | Version 1 baseline: original learning and quiz prototype | Previously tested on a tablet |
-| [`develop-v2`](../../tree/develop-v2) | Version 2 development: interactive pathway, flashcards, analytics, interface and source notes | Code committed; full browser testing pending |
+| [`main`](../../tree/main) | Current application and documentation | **V2.0 merged and deployed** |
+| [`V1.0`](../../releases/tag/V1.0) | Original working prototype snapshot | **Preserved release** |
+| [`V2.0`](../../releases/tag/V2.0) | Week 9 midterm prototype snapshot | **Published release** |
+| [`develop-v2`](../../tree/develop-v2) | Development branch used to implement and review V2.0 | **Merged into `main` via pull request #1**; branch retention is optional |
 
-The branches are intentionally separate so the original working prototype can be preserved while Version 2 is evaluated. **Version 2 is not yet a verified release.**
+Version 1 is preserved by its release tag and associated commit, **not** by keeping `main` at Version 1. Version 2 was developed separately and merged after manual testing. The release tags are fixed snapshots; later documentation commits to `main` do not automatically change the contents of the V2.0 release archive.
 
 ## Learning content
 
@@ -27,34 +33,37 @@ The content is introductory and uses simplified canonical examples; it does not 
 
 ## Features
 
-### Version 1 — baseline
+### Version 1 — initial prototype (retained in V2.0)
 
 - Three selectable lessons with mechanisms, terminology, and biological examples.
 - Nine multiple-choice questions (three per lesson).
 - Immediate answer feedback and one recorded answer per question until reset.
 - Overall answered count, correct count, accuracy percentage, progress bar, and review suggestion.
-- Quiz reset.
+- Quiz reset functionality.
 
-### Version 2 — development branch
+### Version 2 — current release
 
 All Version 1 features are retained, plus:
 
-- **Interactive pathway explorer:** eight selectable stages in a simplified EGFR–Ras/MAPK pathway and a conceptual MEK-inhibition question.
-- **Lesson-specific analytics:** attempted questions, correct answers, and accuracy for each lesson.
-- **Terminology flashcards:** 12 revealable cards with a hide-all control.
-- **Improved navigation and layout:** Learn, Quiz, Pathway, Flashcards, Progress, and Sources sections, with responsive layout and accessibility improvements.
+- **Interactive pathway explorer:** eight selectable stages in a simplified EGFR–Ras/MAPK pathway and a conceptual MEK-inhibition reasoning question.
+- **Lesson-specific analytics:** answered questions, correct answers, and accuracy for each lesson.
+- **Terminology flashcards:** 12 distinct revealable cards with a hide-all control.
+- **Improved navigation and layout:** Learn, Quiz, Pathway, Flashcards, Progress, and Sources sections, with a responsive layout and accessibility-oriented elements.
 - **Sources and content notes:** suggested scientific reading and explicit limitations of the simplified teaching model.
 
 ## How to run
 
-No installation, account, server, build tools, or API key is required.
+**Online:** Open the [live GitHub Pages application](https://jesseicaj2.github.io/BioLearn-ai/).
 
-1. Select the branch for the version you want to inspect.
-2. Download that branch's **`index.html`** file (or download the repository ZIP and extract it).
-3. Open `index.html` in a modern browser.
-4. Use the navigation buttons to explore lessons and study activities.
+**Locally:** No installation, account, server, build tools, or API key is required.
 
-The application is a self-contained HTML file and its core functionality works offline. External reference links require an internet connection.
+1. Download the current `index.html` from [`main`](../../tree/main), or download the V2.0 release source archive and extract it.
+2. Open `index.html` in a modern browser.
+3. Use the navigation buttons to explore lessons and study activities.
+
+The application is a self-contained HTML file designed to operate offline for its core interactions. External scientific reference links require internet access. A dedicated airplane-mode/offline test remains on the checklist; successful online deployment alone is not proof of that test.
+
+To inspect Version 1, use the `V1.0` release rather than the current `main` branch.
 
 ## How to use Version 2
 
@@ -72,16 +81,22 @@ The application is a self-contained HTML file and its core functionality works o
 1. Define the educational problem and select cellular signaling as the subject.
 2. Build Version 1 as a single-file browser prototype with AI assistance.
 3. Manually test Version 1's lessons, quiz feedback, scoring, and reset on a tablet; screenshots showed 8/9 correct (89%) and a successful reset.
-4. Preserve Version 1 on `main`.
-5. Create `develop-v2` and commit the enhanced application.
-6. Document Version 2 changes and prepare a separate acceptance-testing checklist.
+4. Preserve the initial prototype under the `V1.0` GitHub release.
+5. Create `develop-v2` and implement the enhanced learning tools.
+6. Conduct manual Version 2 functionality testing on an Android tablet and document the observations.
+7. Merge `develop-v2` into `main` through [pull request #1](../../pull/1).
+8. Deploy the application through GitHub Pages and confirm the live website functions.
+9. Publish the `V2.0` GitHub release as the Week 9 midterm prototype.
 
 Human review remains necessary: AI-assisted code and explanations should be inspected and tested rather than assumed correct.
 
 ## Testing status
 
-- **Version 1:** observed manual tests of the nine-question quiz, scoring, review prompt, and reset were successful in the provided screenshots.
-- **Version 2:** functional browser testing and scientific content verification are **pending**. See [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) for the test plan.
+- **Version 1:** screenshot-supported manual checks of the nine-question quiz, scoring, review prompt, and reset were successful.
+- **Version 2:** manual testing on an Android tablet confirmed lesson selection, quiz feedback, the pathway reasoning interaction, flashcard operation and hide-all reset, lesson-specific progress display, sources display, and quiz reset. The user also confirmed successful operation from the live GitHub Pages website.
+- **Not fully verified:** exhaustive pathway-stage coverage, every quiz/scoring edge case, offline testing with internet deliberately disabled, cross-browser and keyboard-accessibility coverage, and independent line-by-line scientific content verification.
+
+See [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) for itemized evidence, confirmed observations, and outstanding checks. These are **manual tests**, not an automated test suite.
 
 ## Scientific reading and limitations
 
@@ -95,8 +110,8 @@ These are **suggested readings**, not a claim that every sentence has already be
 
 ## Repository documents
 
-- [CHANGELOG.md](CHANGELOG.md) — version history and feature changes.
-- [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) — manual acceptance tests and evidence checklist.
+- [CHANGELOG.md](CHANGELOG.md) — version history, release milestones, and feature changes.
+- [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) — manual acceptance tests, observed evidence, and remaining checks.
 
 ## Academic context
 
